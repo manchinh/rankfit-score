@@ -14,7 +14,249 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      achievements: {
+        Row: {
+          achievement_key: string
+          description: string | null
+          icon: string | null
+          id: string
+          name: string
+          unlocked_at: string
+          user_id: string
+        }
+        Insert: {
+          achievement_key: string
+          description?: string | null
+          icon?: string | null
+          id?: string
+          name: string
+          unlocked_at?: string
+          user_id: string
+        }
+        Update: {
+          achievement_key?: string
+          description?: string | null
+          icon?: string | null
+          id?: string
+          name?: string
+          unlocked_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      challenges: {
+        Row: {
+          challenge_date: string
+          challenge_key: string
+          completed: boolean
+          created_at: string
+          description: string
+          id: string
+          progress: number
+          reward_points: number
+          target: number
+          title: string
+          user_id: string
+        }
+        Insert: {
+          challenge_date: string
+          challenge_key: string
+          completed?: boolean
+          created_at?: string
+          description: string
+          id?: string
+          progress?: number
+          reward_points?: number
+          target: number
+          title: string
+          user_id: string
+        }
+        Update: {
+          challenge_date?: string
+          challenge_key?: string
+          completed?: boolean
+          created_at?: string
+          description?: string
+          id?: string
+          progress?: number
+          reward_points?: number
+          target?: number
+          title?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      health_entries: {
+        Row: {
+          active_minutes: number
+          bmi: number | null
+          created_at: string
+          distance_km: number
+          entry_date: string
+          id: string
+          sleep_hours: number
+          steps: number
+          updated_at: string
+          user_id: string
+          weight_kg: number | null
+        }
+        Insert: {
+          active_minutes?: number
+          bmi?: number | null
+          created_at?: string
+          distance_km?: number
+          entry_date: string
+          id?: string
+          sleep_hours?: number
+          steps?: number
+          updated_at?: string
+          user_id: string
+          weight_kg?: number | null
+        }
+        Update: {
+          active_minutes?: number
+          bmi?: number | null
+          created_at?: string
+          distance_km?: number
+          entry_date?: string
+          id?: string
+          sleep_hours?: number
+          steps?: number
+          updated_at?: string
+          user_id?: string
+          weight_kg?: number | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          country: string
+          created_at: string
+          current_score: number
+          current_streak: number
+          date_of_birth: string | null
+          days_above_900: number
+          email: string | null
+          gender: string | null
+          height_cm: number | null
+          highest_country_rank: number | null
+          highest_global_rank: number | null
+          id: string
+          is_active: boolean
+          last_active_date: string | null
+          level: number
+          longest_streak: number
+          name: string
+          onboarded: boolean
+          personal_best_score: number
+          updated_at: string
+          weight_kg: number | null
+          xp: number
+        }
+        Insert: {
+          avatar_url?: string | null
+          country?: string
+          created_at?: string
+          current_score?: number
+          current_streak?: number
+          date_of_birth?: string | null
+          days_above_900?: number
+          email?: string | null
+          gender?: string | null
+          height_cm?: number | null
+          highest_country_rank?: number | null
+          highest_global_rank?: number | null
+          id: string
+          is_active?: boolean
+          last_active_date?: string | null
+          level?: number
+          longest_streak?: number
+          name?: string
+          onboarded?: boolean
+          personal_best_score?: number
+          updated_at?: string
+          weight_kg?: number | null
+          xp?: number
+        }
+        Update: {
+          avatar_url?: string | null
+          country?: string
+          created_at?: string
+          current_score?: number
+          current_streak?: number
+          date_of_birth?: string | null
+          days_above_900?: number
+          email?: string | null
+          gender?: string | null
+          height_cm?: number | null
+          highest_country_rank?: number | null
+          highest_global_rank?: number | null
+          id?: string
+          is_active?: boolean
+          last_active_date?: string | null
+          level?: number
+          longest_streak?: number
+          name?: string
+          onboarded?: boolean
+          personal_best_score?: number
+          updated_at?: string
+          weight_kg?: number | null
+          xp?: number
+        }
+        Relationships: []
+      }
+      score_history: {
+        Row: {
+          active_minutes_score: number
+          activity_score: number
+          bmi_score: number
+          change_delta: number
+          change_reasons: Json
+          consistency_score: number
+          created_at: string
+          current_score: number
+          distance_score: number
+          id: string
+          personal_best: number
+          score_date: string
+          sleep_score: number
+          user_id: string
+        }
+        Insert: {
+          active_minutes_score?: number
+          activity_score?: number
+          bmi_score?: number
+          change_delta?: number
+          change_reasons?: Json
+          consistency_score?: number
+          created_at?: string
+          current_score: number
+          distance_score?: number
+          id?: string
+          personal_best: number
+          score_date: string
+          sleep_score?: number
+          user_id: string
+        }
+        Update: {
+          active_minutes_score?: number
+          activity_score?: number
+          bmi_score?: number
+          change_delta?: number
+          change_reasons?: Json
+          consistency_score?: number
+          created_at?: string
+          current_score?: number
+          distance_score?: number
+          id?: string
+          personal_best?: number
+          score_date?: string
+          sleep_score?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
