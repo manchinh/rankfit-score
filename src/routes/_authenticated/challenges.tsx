@@ -73,7 +73,6 @@ function ChallengesPage() {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return;
     await supabase.from("challenges").update({ completed: true }).eq("id", id);
-    await supabase.rpc as unknown; // no rpc — update xp on profile directly
     const { data: profile } = await supabase.from("profiles").select("xp").eq("id", user.id).maybeSingle();
     await supabase.from("profiles").update({ xp: (profile?.xp ?? 0) + reward }).eq("id", user.id);
     toast.success(`+${reward} XP claimed`);
