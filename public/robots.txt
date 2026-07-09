@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /_authenticated/
+Disallow: /dashboard
+Disallow: /score
+Disallow: /challenges
+Disallow: /ranking
+Disallow: /profile
+Disallow: /achievements
+Disallow: /log
+Disallow: /onboarding
