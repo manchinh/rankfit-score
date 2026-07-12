@@ -1,0 +1,10 @@
+[build]
+  command = "bun run build"
+  publish = "dist"
+
+# Nitro's `netlify` preset emits the SSR handler into
+# `.netlify/functions-internal/server.mjs` and static assets into `dist/`.
+# Netlify picks up the internal function automatically — no `functions` entry needed.
+
+[build.environment]
+  NODE_VERSION = "20"
