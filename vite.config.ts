@@ -12,4 +12,8 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Target Netlify (Functions) when building outside the Lovable sandbox.
+  // Inside Lovable, the sandbox forces the Cloudflare preset and this is ignored.
+  nitro: { preset: "netlify" },
 });
+
