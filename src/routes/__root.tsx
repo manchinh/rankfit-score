@@ -84,16 +84,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "RankFit turns your daily activity into a single dynamic health score from 0–1000, then ranks you globally and by country. Compete, streak, and level up your health.",
+          "Turn everyday movement into a live 0–1000 RankFit Score. Rank globally and by country. Build streaks, unlock achievements, and prove your consistency.",
       },
       { property: "og:title", content: "RankFit — Your Health. Your Score. Your Rank." },
       {
         property: "og:description",
         content:
-          "A gamified health scoring platform. Log activity, watch your RankFit Score move, and climb the global leaderboard.",
+          "Turn everyday movement into a live 0–1000 RankFit Score. Rank globally and by country. Build streaks, unlock achievements, and prove your consistency.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "RankFit — Your Health. Your Score. Your Rank." },
+      { name: "twitter:description", content: "Turn everyday movement into a live 0–1000 RankFit Score. Rank globally and by country. Build streaks, unlock achievements, and prove your consistency." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/318e330d-a834-4e0f-8eab-0dbe205eb714/id-preview-f4f4aace--8ad8ddcd-91aa-44f2-972f-b5b4cb094068.lovable.app-1783818864867.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/318e330d-a834-4e0f-8eab-0dbe205eb714/id-preview-f4f4aace--8ad8ddcd-91aa-44f2-972f-b5b4cb094068.lovable.app-1783818864867.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
